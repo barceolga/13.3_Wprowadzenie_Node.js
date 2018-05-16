@@ -4,14 +4,14 @@ process.stdin.on('readable', function() {
   if (myInput !== null) {
     var myInstruction = myInput.toString().trim();
     switch (myInstruction) {
-      case "Exit":
+      case '/exit':
         process.stdout.write("Quiting app!\n");
         process.exit();
         break;
-      case "Language":
+      case '/language':
         process.stdout.write("The language is " + process.env.LANG + ".\n");
         break;
-      case "Version":
+      case '/version':
         process.stdout.write("The version is " + process.version + ".\n" )
         break;
       default:
